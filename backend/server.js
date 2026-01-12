@@ -11,7 +11,7 @@ const { errorHandler } = require("./utils/errorHandler");
 
 const app = express();
 
-/* ✅ GLOBAL CORS — THIS IS ENOUGH */
+
 app.use(cors({
   origin: "http://localhost:3000",
   credentials: true,
@@ -19,12 +19,12 @@ app.use(cors({
 
 app.use(express.json());
 
-/* Routes */
+
 app.use("/api/v1/auth", require("./routes/authRoutes"));
 
 app.use("/api/v1/tasks", taskRoutes);
 
-/* Error handler */
+
 app.use(errorHandler);
 app.use(
   morgan("combined", {

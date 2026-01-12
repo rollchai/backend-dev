@@ -10,7 +10,7 @@ const Dashboard = ({ onLogout }) => {
 
   return (
     <div style={styles.container}>
-      {/* Header */}
+     
       <div style={styles.header}>
         <h2 style={styles.title}>📊 Dashboard</h2>
         <button onClick={handleLogout} style={styles.logoutBtn}>
@@ -18,7 +18,7 @@ const Dashboard = ({ onLogout }) => {
         </button>
       </div>
 
-      {/* Content */}
+      
       <div style={styles.card}>
         <h3 style={styles.sectionTitle}>📝 Your Tasks</h3>
         <TaskList />

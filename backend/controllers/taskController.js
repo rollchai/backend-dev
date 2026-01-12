@@ -1,6 +1,6 @@
 const Task = require("../models/Task");
 
-// Get Tasks (all for admin, user-specific for normal user)
+
 exports.getTasks = async (req, res, next) => {
   try {
     const tasks = req.user.role === "admin" ? 
@@ -44,7 +44,7 @@ exports.deleteTask = async (req, res, next) => {
       return res.status(403).json({ message: "Not authorized" });
     }
 
-    await task.deleteOne(); // ✅ FIX
+    await task.deleteOne();
 
     res.json({ message: "Task deleted" });
   } catch (err) {
