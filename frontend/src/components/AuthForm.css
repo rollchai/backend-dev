@@ -1,0 +1,42 @@
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-form input {
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.auth-form input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.auth-form button {
+  padding: 10px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.auth-form button:disabled {
+  background: #a0aec0;
+  cursor: not-allowed;
+}
+
+.auth-form button:hover:not(:disabled) {
+  background: #5a67d8;
+}
+
+.error-text {
+  margin-top: 10px;
+  color: red;
+  font-size: 13px;
+}
